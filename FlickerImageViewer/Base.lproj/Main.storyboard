@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FlickerImageViewer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="138-M0-beC">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="of9-9u-e8r">
+                                        <rect key="frame" x="37" y="207.5" width="301.5" height="41"/>
+                                        <string key="text">아래 슬라이더로 사진이 보일 시간을 정하세요
+(기본 : 5초)</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="h2R-Xp-9zh">
+                                        <rect key="frame" x="95.5" y="258.5" width="184" height="31"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="180" id="gRw-dc-Y1c"/>
+                                            <constraint firstAttribute="height" constant="30" id="uxZ-wr-NQ3"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="intervalChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="eeE-HP-S59"/>
+                                        </connections>
+                                    </slider>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oBx-i4-7g4">
+                                        <rect key="frame" x="172.5" y="308.5" width="30" height="30"/>
+                                        <state key="normal" title="시작"/>
+                                        <connections>
+                                            <action selector="selectStartButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CRK-Wf-Rxf"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="h2R-Xp-9zh" firstAttribute="bottom" secondItem="oBx-i4-7g4" secondAttribute="top" constant="-20" id="GAz-bj-7cy"/>
+                                    <constraint firstItem="oBx-i4-7g4" firstAttribute="centerX" secondItem="138-M0-beC" secondAttribute="centerX" id="NhU-Bw-MJ9"/>
+                                    <constraint firstItem="h2R-Xp-9zh" firstAttribute="centerX" secondItem="138-M0-beC" secondAttribute="centerX" id="RVz-YB-EGT"/>
+                                    <constraint firstItem="of9-9u-e8r" firstAttribute="bottom" secondItem="h2R-Xp-9zh" secondAttribute="top" constant="-10" id="bdY-uz-GEH"/>
+                                    <constraint firstItem="oBx-i4-7g4" firstAttribute="centerY" secondItem="138-M0-beC" secondAttribute="centerY" id="ljJ-c4-JyJ"/>
+                                    <constraint firstItem="of9-9u-e8r" firstAttribute="centerX" secondItem="138-M0-beC" secondAttribute="centerX" id="qdm-ma-Abf"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XaT-1j-Bp2">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="138-M0-beC" secondAttribute="bottom" id="R0F-CH-ril"/>
+                            <constraint firstItem="138-M0-beC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="R7k-ce-FLs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="138-M0-beC" secondAttribute="trailing" id="Y5v-n3-dF6"/>
+                            <constraint firstItem="138-M0-beC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="gJb-JW-ocV"/>
+                            <constraint firstItem="XaT-1j-Bp2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="h2X-0h-3pG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XaT-1j-Bp2" secondAttribute="trailing" id="kl0-1Z-ghc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="XaT-1j-Bp2" secondAttribute="bottom" id="nie-M8-pEg"/>
+                            <constraint firstItem="XaT-1j-Bp2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wga-SL-r6M"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="XaT-1j-Bp2" id="HqF-Ur-Z5h"/>
+                        <outlet property="intervalLabel" destination="of9-9u-e8r" id="QxH-AM-cUW"/>
+                        <outlet property="settingView" destination="138-M0-beC" id="iB9-Wq-z5I"/>
+                        <outlet property="slider" destination="h2R-Xp-9zh" id="umT-06-XzT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

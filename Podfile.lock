@@ -1,0 +1,28 @@
+PODS:
+  - Alamofire (4.8.0)
+  - Kingfisher (5.0.1)
+  - SwiftlySlider (0.7.1)
+  - SWXMLHash (4.7.6)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.8.0)
+  - Kingfisher (~> 5.0.0)
+  - SwiftlySlider
+  - SWXMLHash (~> 4.7.0)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - Kingfisher
+    - SwiftlySlider
+    - SWXMLHash
+
+SPEC CHECKSUMS:
+  Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
+  Kingfisher: 4f771421b9208185217550528a06fd48756cb7c2
+  SwiftlySlider: 1c9b3dd207a50b83983b29317e3247711d387e14
+  SWXMLHash: f6e0933ce74f2626669dc544851bc9fc1941670d
+
+PODFILE CHECKSUM: cc0ea99de79a4eb89d8e43352cee64ef62525444
+
+COCOAPODS: 1.5.3
